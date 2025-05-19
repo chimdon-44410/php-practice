@@ -90,14 +90,10 @@ echo $attendanceMessage . "学籍番号:{$ueno->studentId}";
 // Q5 定義済みクラス
 // 問題１
 $date = new DateTime();
-$date->modify('-1 month');
-echo $date->format('Y-m-d H:i:s');
+$date->modify('-1 month');->format('Y-m-d H:i:s');
 
 // 問題２
-$date1 = new DateTime('1992-04-25');
-$date2 = new DateTime();
 
-$interval = $date1->diff($date2);
-echo "あの日から{$interval->days}日経過しました。";
+echo "あの日から" . (new DateTime('1992-04-25'))->diff(new DateTime())->days . "日経過しました。";
 
 ?>

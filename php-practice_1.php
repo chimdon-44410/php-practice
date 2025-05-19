@@ -16,21 +16,17 @@ echo $num;
 
 // Q3 日付操作
 
-// echo date ('Y年m月d日 H時i分s秒');
+date_default_timezone_set('Asia/Tokyo');
 
-echo "現在時刻は、" . date ('Y年m月d日 H時i分s秒') . "です。";
+echo "現在時刻は、" . date('Y年m月d日 H時i分s秒') . "です。";
 
 // Q4 条件分岐-1 if文
 $device = "mac";
 
-if ($device === "windows") {
-  echo "使用OSは、windowsです。";
+if (in_array($device, ["windows", "mac"])) {
+    echo "使用OSは、{$device}です。";
 } else {
-  if ($device === "mac") {
-    echo "使用OSは、macです。";
-  } else {
     echo "どちらでもありません。";
-  }
 }
 
 // Q5 条件分岐-2 三項演算子
