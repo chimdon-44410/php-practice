@@ -64,12 +64,13 @@ class Student
     public $studentName;
 
     public function __construct($id, $name)
-    { throw new Exception("学籍番号は正の整数です。");
+    {
         if (!is_int($id) || $id <= 0) {
-
+          throw new Exception("学籍番号は正の整数です。");
+        } else {
+            $this->studentId = $id;
+            $this->studentName = $name;
         }
-        $this->studentId = $id;
-        $this->studentName = $name;
     }
 
     public function attend($subject)

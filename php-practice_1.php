@@ -85,8 +85,8 @@ $prefecture = [
   '神奈川県' => '横浜市'
 ];
 
-$prefecture['大阪府'] = '大阪府';
-$prefecture['京都府'] = '京都府';
+$prefecture['大阪府'] = '大阪市';
+$prefecture['京都府'] = '京都市';
 var_dump($prefecture);
 
 $kanto = ['東京都','茨城県','栃木県','群馬県','埼玉県','千葉県','神奈川県'];
